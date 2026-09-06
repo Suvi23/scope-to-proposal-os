@@ -1,0 +1,979 @@
+{
+  "dataset": "D:\\scope-to-proposal-os\\evaluation_dataset.xlsx",
+  "cases_evaluated": 12,
+  "successful_cases": 8,
+  "averages": {
+    "requirements": 0.20648035413660412,
+    "ambiguity": 0.15324900793650792,
+    "integrations": 1.0,
+    "channels": 0.9583333333333334,
+    "constraints": 1.0,
+    "assumption_safety": 1.0,
+    "timeline": 1.0,
+    "overall": 0.5508345922017797
+  },
+  "results": [
+    {
+      "case_id": "S01",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.3939393939393939,
+        "ambiguity": 0.17083333333333334,
+        "integrations": 1.0,
+        "channels": 0.6666666666666666,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.6053787878787878
+      },
+      "actual_output": {
+        "business_goal": "Increase bookings",
+        "target_users": [
+          "Patients",
+          "Staff"
+        ],
+        "requirements": [
+          {
+            "requirement": "Answer all customer questions.",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Qualify patients.",
+            "category": "Qualification",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Book appointments.",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Follow up with non-responsive leads.",
+            "category": "Follow-up",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Update CRM.",
+            "category": "Integration",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Send reminders.",
+            "category": "Communication",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Handle phone calls.",
+            "category": "Phone Handling",
+            "source": "needs_confirmation",
+            "confidence": 0.6,
+            "notes": "Unclear if phone handling is required."
+          }
+        ],
+        "integrations": [
+          "CRM"
+        ],
+        "channels": [
+          "WhatsApp",
+          "Instagram"
+        ],
+        "constraints": [
+          "Must support English, Hindi and Marathi.",
+          "Must not make mistakes.",
+          "Must be live within 3 days."
+        ],
+        "timeline": "3 days",
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "Does the CRM provide an API or webhook for integration?",
+          "Which phone system is currently used?",
+          "Does the phone system provide an integration API?",
+          "Are inbound calls, outbound calls, or both required?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Automate repetitive enquiry handling",
+          "support WhatsApp/Instagram first",
+          "answer approved FAQs",
+          "qualify patients",
+          "appointment booking",
+          "follow-up",
+          "CRM update",
+          "reminders",
+          "multilingual EN/HI/MR",
+          "human escalation",
+          "optimize for qualified bookings."
+        ],
+        "clear_items": [
+          "Business type",
+          "3 branches",
+          "repetitive enquiries",
+          "desired channels",
+          "qualification",
+          "booking",
+          "follow-up",
+          "CRM",
+          "reminders",
+          "languages",
+          "business outcome."
+        ],
+        "ambiguities": [
+          "CRM/API availability",
+          "appointment system",
+          "exact qualification rules",
+          "FAQ knowledge source",
+          "follow-up timing",
+          "human handoff rules",
+          "whether voice is phase 1",
+          "branch routing."
+        ],
+        "risks_or_conflicts": "‘Never make mistakes’; full multi-channel + CRM + booking + voice in 3 days is high risk; medical/dental responses need controlled knowledge and escalation."
+      }
+    },
+    {
+      "case_id": "S02",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.35,
+        "ambiguity": 0.36666666666666664,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.6458333333333333
+      },
+      "actual_output": {
+        "business_goal": "Increase sales conversions from leads",
+        "target_users": [
+          "Salespeople"
+        ],
+        "requirements": [
+          {
+            "requirement": "Read lead forms.",
+            "category": "Lead Processing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Read WhatsApp chats.",
+            "category": "Lead Processing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Read property preferences.",
+            "category": "Lead Processing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Score leads.",
+            "category": "Lead Scoring",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Recommend the best property.",
+            "category": "Recommendation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Send brochures.",
+            "category": "Communication",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Book site visits.",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Follow up with leads until purchase.",
+            "category": "Follow-up",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Know live inventory.",
+            "category": "Inventory Management",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Never recommend a sold unit.",
+            "category": "Recommendation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "CRM",
+          "Google Sheets",
+          "WhatsApp"
+        ],
+        "channels": [
+          "WhatsApp"
+        ],
+        "constraints": [
+          "Budget is limited."
+        ],
+        "timeline": "next week",
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "Which CRM is being used?",
+          "Does the CRM provide an API or webhook for integration?",
+          "Does Google Sheets provide an API for integration?",
+          "Does WhatsApp provide an API for integration?",
+          "What is the source of live inventory data?",
+          "How is a sold unit identified?",
+          "What is the budget limit in monetary terms?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Capture/normalize leads",
+          "extract property preferences",
+          "lead scoring",
+          "approved property recommendation",
+          "brochure sharing",
+          "site-visit booking",
+          "follow-up",
+          "CRM/Sheet sync",
+          "inventory freshness/validation",
+          "human handoff."
+        ],
+        "clear_items": [
+          "Lead sources",
+          "repetitive qualification",
+          "desired scoring/recommendation/booking",
+          "CRM + Sheets + WhatsApp",
+          "limited budget",
+          "urgent timeline."
+        ],
+        "ambiguities": [
+          "CRM name/API",
+          "inventory source and update frequency",
+          "scoring criteria",
+          "property matching rules",
+          "WhatsApp provider",
+          "site-visit calendar",
+          "budget."
+        ],
+        "risks_or_conflicts": "‘Never recommend sold unit’ requires authoritative live inventory; autonomous recommendations can create commercial risk; broad CRM + WhatsApp + inventory integration in one week may be unrealistic."
+      }
+    },
+    {
+      "case_id": "S03",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.1111111111111111,
+        "ambiguity": 0.11904761904761904,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.5126984126984128
+      },
+      "actual_output": {
+        "business_goal": "Increase enrollment and revenue through automated counseling",
+        "target_users": [
+          "Parents",
+          "Students"
+        ],
+        "requirements": [
+          {
+            "requirement": "Answer all questions about fees, batches, faculty, timings, results, and online class availability",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Assess student's level",
+            "category": "Assessment",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Recommend appropriate course based on student's level",
+            "category": "Recommendation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Persuade students to enroll",
+            "category": "Sales",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Collect payment",
+            "category": "Payment",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Call students automatically if they don't reply",
+            "category": "Follow-up",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [],
+        "channels": [
+          "Instagram",
+          "WhatsApp"
+        ],
+        "constraints": [
+          "Must support Marathi, Hindi, and English"
+        ],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "Which payment gateway or system will be used for collecting payments?",
+          "Which telephony system will be used for automated calls?",
+          "What data sources or criteria will be used to assess student's level?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "FAQ answering",
+          "student qualification",
+          "course recommendation based on approved rules",
+          "multilingual support",
+          "lead capture",
+          "follow-up",
+          "payment handoff",
+          "human escalation",
+          "optional voice follow-up."
+        ],
+        "clear_items": [
+          "Audience",
+          "channels",
+          "repetitive questions",
+          "course recommendation",
+          "languages",
+          "follow-up goal."
+        ],
+        "ambiguities": [
+          "Course eligibility rules",
+          "knowledge source",
+          "payment provider",
+          "voice scope",
+          "escalation",
+          "claims about results",
+          "consent for calls."
+        ],
+        "risks_or_conflicts": "‘Convinces them’ can encourage uncontrolled persuasion; result claims need approved content; automated calls require consent/process; collecting payments directly adds security scope."
+      }
+    },
+    {
+      "case_id": "S04",
+      "status": "FAILED",
+      "error": "Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "case_id": "S05",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.2125,
+        "ambiguity": 0.041666666666666664,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.5327083333333333
+      },
+      "actual_output": {
+        "business_goal": "Increase average order value",
+        "target_users": [
+          "Customers"
+        ],
+        "requirements": [
+          {
+            "requirement": "Provide AI chatbot on website and WhatsApp",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Recommend products",
+            "category": "Product Recommendation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Check order status",
+            "category": "Order Tracking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Create return requests",
+            "category": "Return Management",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Understand every customer's skin and give personalized advice",
+            "category": "Personalization",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "Shopify",
+          "Shiprocket"
+        ],
+        "channels": [
+          "Website",
+          "WhatsApp"
+        ],
+        "constraints": [
+          "Zero customer complaints"
+        ],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "How will zero customer complaints be defined and measured?",
+          "What level of personalization is expected for skin understanding?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Website + WhatsApp support",
+          "product/FAQ answers",
+          "order-status lookup",
+          "return-request workflow",
+          "product recommendations",
+          "approved cross-sell",
+          "Shopify/Shiprocket integration",
+          "escalation for sensitive/uncertain advice."
+        ],
+        "clear_items": [
+          "Support topics",
+          "channels",
+          "Shopify",
+          "Shiprocket",
+          "desired recommendation and returns."
+        ],
+        "ambiguities": [
+          "Recommendation rules",
+          "data available",
+          "return policy",
+          "integration permissions",
+          "what ‘skin advice’ means",
+          "cross-sell constraints."
+        ],
+        "risks_or_conflicts": "‘Zero complaints’ is unrealistic; personalized skin advice can become health-related and should be constrained; order/return actions require authorization and validation."
+      }
+    },
+    {
+      "case_id": "S06",
+      "status": "FAILED",
+      "error": "Error code: 400 - {'error': {'message': \"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'integrations', 'channels', 'constraints', 'timeline', 'budget', 'assumptions', 'missing_information'\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\"business_goal\":\"Automate customer interactions and reservations to reduce staff involvement\",\"target_users\":[\"Customers\"],\"requirements\":[{\"requirement\":\"Answer all incoming calls\",\"category\":\"Communication\",\"source\":\"client_stated\",\"confidence\":1.0,\"notes\":null},{\"requirement\":\"Take reservations\",\"category\":\"Appointment Booking\",\"source\":\"client_stated\",\"confidence\":1.0,\"notes\":null}]}'}}"
+    },
+    {
+      "case_id": "S07",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.12037037037037036,
+        "ambiguity": 0.0,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.49212962962962964
+      },
+      "actual_output": {
+        "business_goal": "Convert Instagram leads into paid memberships",
+        "target_users": [
+          "Potential customers (Instagram leads)"
+        ],
+        "requirements": [
+          {
+            "requirement": "Collect lead information: goals, budget, preferred timings, and location",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Score the lead",
+            "category": "Lead Scoring",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Book a trial session",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Continue messaging leads until they purchase",
+            "category": "Follow-up",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "Calendly",
+          "Spreadsheet"
+        ],
+        "channels": [
+          "Instagram"
+        ],
+        "constraints": [
+          "Must not book more than 20 trial slots per week.",
+          "Must maintain a friendly tone and avoid pushiness."
+        ],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "What criteria should be used to score leads?",
+          "Does Calendly provide an API or webhook for integration?",
+          "Does the spreadsheet support automated updates or integration?",
+          "What messaging channel should be used for ongoing communication?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Instagram lead capture",
+          "qualification",
+          "lead scoring",
+          "capacity-aware trial booking",
+          "Calendly integration",
+          "spreadsheet sync",
+          "follow-up",
+          "tone constraints",
+          "opt-out/human handoff."
+        ],
+        "clear_items": [
+          "Lead source",
+          "qualification fields",
+          "capacity",
+          "Calendly",
+          "spreadsheet",
+          "desired booking outcome",
+          "tone."
+        ],
+        "ambiguities": [
+          "Scoring thresholds",
+          "slot source",
+          "follow-up cadence",
+          "trainer assignment",
+          "purchase process."
+        ],
+        "risks_or_conflicts": "Capacity constraint is critical; aggressive follow-up conflicts with ‘not pushy’; spreadsheet sync can create race conditions unless Calendly is source of truth."
+      }
+    },
+    {
+      "case_id": "S08",
+      "status": "FAILED",
+      "error": "Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "case_id": "S09",
+      "status": "FAILED",
+      "error": "Error code: 400 - {'error': {'message': \"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': ''}}"
+    },
+    {
+      "case_id": "S10",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.0625,
+        "ambiguity": 0.2222222222222222,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.5163194444444444
+      },
+      "actual_output": {
+        "business_goal": "Improve accuracy and automation of bookkeeping and tax services for small businesses",
+        "target_users": [
+          "Small business clients"
+        ],
+        "requirements": [
+          {
+            "requirement": "Read documents (invoices, bank statements) uploaded by clients",
+            "category": "Document Processing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Categorize transactions",
+            "category": "Transaction Categorization",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Answer tax questions",
+            "category": "Tax Advisory",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Prepare reports",
+            "category": "Reporting",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Remind clients for missing documents",
+            "category": "Communication / Reminders",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Submit filings automatically",
+            "category": "Filing Automation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "Google Drive",
+          "QuickBooks",
+          "Email"
+        ],
+        "channels": [
+          "Email"
+        ],
+        "constraints": [
+          "Must be 100% accurate"
+        ],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "Which QuickBooks product is used (Online, Desktop) and does it provide an API for integration?",
+          "Does Google Drive integration require OAuth and what folder structure is used?",
+          "How will the system submit filings automatically? Which tax authorities and what APIs are available?",
+          "What is the definition of '100% accurate' and how will accuracy be measured?",
+          "What types of documents will be uploaded (formats, size limits)?",
+          "What are the specific reporting formats required?",
+          "Are there any regulatory or compliance requirements for handling financial data?",
+          "Are there any security requirements for storing sensitive data?",
+          "Are there any user authentication or access control requirements?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Document intake/classification",
+          "missing-document detection",
+          "bookkeeping assistance",
+          "approved FAQ",
+          "report drafting",
+          "reminder workflow",
+          "Google Drive/QuickBooks/email integration",
+          "human review for tax/filing decisions."
+        ],
+        "clear_items": [
+          "Document sources",
+          "bookkeeping",
+          "client questions",
+          "reminders",
+          "tools",
+          "desired automation."
+        ],
+        "ambiguities": [
+          "Document formats",
+          "categorization rules",
+          "tax jurisdictions",
+          "filing software/API",
+          "approval workflow",
+          "confidence thresholds."
+        ],
+        "risks_or_conflicts": "100% accuracy is unrealistic; tax advice and filings are high-stakes; automatic submission without human review is inappropriate; sensitive financial documents require strong access controls."
+      }
+    },
+    {
+      "case_id": "S11",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.15327380952380953,
+        "ambiguity": 0.13888888888888887,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.5314236111111111
+      },
+      "actual_output": {
+        "business_goal": "Improve service booking efficiency and pricing accuracy",
+        "target_users": [
+          "Customers",
+          "Technicians"
+        ],
+        "requirements": [
+          {
+            "requirement": "Understand the customer's problem description.",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Estimate the price of the service.",
+            "category": "Pricing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Guarantee the price before technician visits.",
+            "category": "Pricing",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Assign the nearest technician.",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Book the job.",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Send updates to the customer.",
+            "category": "Communication",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "Spreadsheet"
+        ],
+        "channels": [
+          "WhatsApp",
+          "Phone"
+        ],
+        "constraints": [],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "How will the system access the technician location spreadsheet?",
+          "What is the format and accessibility of the spreadsheet?",
+          "What channels will be used to send updates (WhatsApp, SMS, Email)?",
+          "What system is used for booking jobs?",
+          "What data sources are available for price estimation?",
+          "What is the definition of 'nearest technician' (distance, availability)?",
+          "What is the expected response time for price guarantee?",
+          "What is the expected volume of requests?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Issue intake",
+          "service/category classification",
+          "location capture",
+          "technician availability/assignment support",
+          "booking",
+          "status updates",
+          "price guidance only within approved ranges/rules",
+          "human escalation."
+        ],
+        "clear_items": [
+          "Service categories",
+          "channels",
+          "technician count",
+          "current spreadsheet",
+          "booking/update goals."
+        ],
+        "ambiguities": [
+          "Location data freshness",
+          "technician skills",
+          "availability",
+          "pricing rules",
+          "dispatch logic",
+          "emergency cases."
+        ],
+        "risks_or_conflicts": "Diagnosis from text can be unreliable; guaranteed price before inspection may conflict with actual repair scope; spreadsheet location data may be stale; emergency escalation required."
+      }
+    },
+    {
+      "case_id": "S12",
+      "status": "PASSED",
+      "scores": {
+        "requirements": 0.24814814814814815,
+        "ambiguity": 0.16666666666666666,
+        "integrations": 1.0,
+        "channels": 1.0,
+        "constraints": 1.0,
+        "assumption_safety": 1.0,
+        "timeline": 1.0,
+        "overall": 0.5701851851851852
+      },
+      "actual_output": {
+        "business_goal": "Automate front-desk operations",
+        "target_users": [
+          "Patients"
+        ],
+        "requirements": [
+          {
+            "requirement": "Answer symptom-related queries",
+            "category": "Chatbot",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Diagnose disease based on symptoms",
+            "category": "Diagnosis",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": "Scope of diagnosis and medical accuracy is undefined."
+          },
+          {
+            "requirement": "Recommend medicines based on diagnosis",
+            "category": "Medicine Recommendation",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": "Scope of medicine recommendation and regulatory compliance is undefined."
+          },
+          {
+            "requirement": "Book appointments",
+            "category": "Appointment Booking",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Send appointment reminders",
+            "category": "Reminder",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Follow up after visits",
+            "category": "Follow-up",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          },
+          {
+            "requirement": "Integrate with hospital system",
+            "category": "Integration",
+            "source": "client_stated",
+            "confidence": 1.0,
+            "notes": null
+          }
+        ],
+        "integrations": [
+          "Hospital System"
+        ],
+        "channels": [],
+        "constraints": [
+          "Support Hindi, Marathi and English"
+        ],
+        "timeline": null,
+        "budget": null,
+        "assumptions": [],
+        "missing_information": [
+          "Which channels are used for patient messages?",
+          "Does the hospital system provide an API or integration method?",
+          "What is the scope of disease diagnosis and medicine recommendation?"
+        ]
+      },
+      "ground_truth": {
+        "expected_requirements": [
+          "Administrative FAQ",
+          "doctor availability",
+          "fees",
+          "appointment booking",
+          "reminders",
+          "multilingual support",
+          "controlled post-visit administrative follow-up",
+          "hospital-system integration if supported",
+          "human/clinical escalation."
+        ],
+        "clear_items": [
+          "Patient contact topics",
+          "booking",
+          "reminders",
+          "languages",
+          "front-desk workload",
+          "integration goal."
+        ],
+        "ambiguities": [
+          "Hospital system/API",
+          "doctor schedules",
+          "fee source",
+          "follow-up workflow",
+          "escalation",
+          "data retention."
+        ],
+        "risks_or_conflicts": "Diagnosis/medication recommendations are high-stakes and out of scope for v1; ‘replace most front-desk work’ is an outcome hypothesis, not a guaranteed result; health data requires strict privacy/security controls."
+      }
+    }
+  ]
+}
